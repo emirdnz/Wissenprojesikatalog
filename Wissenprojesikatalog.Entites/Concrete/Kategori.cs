@@ -13,7 +13,7 @@ namespace Wissenprojesikatalog.Entites.Constract
 
         public string? Aciklama { get; set; }
 
-        public ICollection <Urun> Urunler { get; set; }
+        public ICollection <Urun>? Urunler { get; set; }
 
 
     }
