@@ -16,6 +16,11 @@ namespace Wissenprojesikatalog.DAL.EntitiyConfig.Concrete
         public override void Configure(EntityTypeBuilder<Birim>builder)
         {
             base.Configure(builder);
+            builder.Property(p=>p.BirimAdi).HasMaxLength(50);
+
+            //ayni birimden ikinci kayıt olmasın
+
+            builder.HasIndex(p=> p.BirimAdi).IsUnique();    
 
         }
         
