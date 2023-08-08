@@ -23,7 +23,7 @@ namespace Wissenprojesikatalog.DAL.context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=.; Database=WissenKatalogProjesi; Trusted_Connection=true;TrusServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"server=.; Database=WissenKatalogProjesi; Trusted_Connection=true;TrustServerCertificate=true");
         }
 
 
@@ -31,7 +31,7 @@ namespace Wissenprojesikatalog.DAL.context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Birim>().Property(p=>p.BirimAdi).HasMaxLength(50); //1. yöntem
+            // modelBuilder.Entity<Birim>().Property(p=>p.BirimAdi).HasMaxLength(50); //1. yöntem
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());  //2.yöntem  
         }
